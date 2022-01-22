@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 const port = 4000;
+const productsRoute = require('./src/routes/products');
 
 
-app.use(( ) => {
-    console.log('hello server');
-})
+app.use('/',productsRoute);
 
 app.listen(port, () => {
     console.log(`your server || http://localhost:${port}`)
